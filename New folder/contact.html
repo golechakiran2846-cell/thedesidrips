@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact TheDesiDrips. Reach out for any questions about drops, orders, returns, or support. We are here to help.">
+    <meta name="keywords" content="streetwear contact, TheDesiDrips support, customer service, indian streetwear brand contact">
+    <meta name="author" content="TheDesiDrips">
+    <title>Contact | TheDesiDrips</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <style>
+        .contact-layout { padding-top: calc(var(--header-height) + 5rem); display: grid; grid-template-columns: 1fr 1.5fr; gap: 5rem; margin-bottom: 8rem; }
+        .contact-info h1 { font-size: 4rem; margin-bottom: 2rem; color: var(--accent-color); }
+        .info-block { margin-bottom: 2rem; }
+        .info-block h4 { font-family: var(--font-heading); margin-bottom: 0.5rem; }
+        .info-block p, .info-block a { color: var(--text-secondary); font-size: 1.1rem; }
+        .info-block a:hover { color: var(--text-primary); }
+        
+        .contact-form { background: var(--bg-secondary); padding: 4rem; border: 1px solid var(--border-color); }
+        .form-group { margin-bottom: 2rem; position: relative; }
+        .form-group input, .form-group textarea { width: 100%; background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.2); padding: 1rem 0; color: var(--text-primary); font-family: var(--font-body); font-size: 1.1rem; outline: none; transition: border-color 0.3s ease; }
+        .form-group input:focus, .form-group textarea:focus { border-bottom-color: var(--accent-color); }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        
+        @media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; } .contact-form { padding: 2rem; } }
+    </style>
+</head>
+<body class="loading">
+    <div class="cursor"></div><div class="cursor-follower"></div>
+    <div class="loader"><div class="loader-text"><span>Contact</span></div><div class="loader-progress"></div></div>
+
+    <header class="header">
+        <div class="nav-wrapper">
+            <a href="index.html" class="logo"><img src="logo.png" alt="TheDesiDrips" class="logo-img"></a>
+            <nav class="nav-links">
+                <a href="collections.html" class="nav-link hover-target">Shop</a>
+                <a href="about.html" class="nav-link hover-target">About</a>
+                <a href="contact.html" class="nav-link active hover-target">Contact</a>
+                <a href="checkout.html" class="nav-link hover-target">Checkout</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="menu-toggle hover-target"><span class="line"></span><span class="line"></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="menu-bg"></div>
+        <nav class="mobile-nav-links">
+            <div class="menu-item"><a href="index.html" class="hover-target">Home</a></div>
+            <div class="menu-item"><a href="collections.html" class="hover-target">Shop All</a></div>
+            <div class="menu-item"><a href="about.html" class="hover-target">Brand Story</a></div>
+            <div class="menu-item"><a href="contact.html" class="hover-target">Contact</a></div>
+            <div class="menu-item"><a href="checkout.html" class="hover-target">Checkout</a></div>
+        </nav>
+    </div>
+
+    <main id="main">
+        <div class="container">
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <h1>Hit Us Up.</h1>
+                    <p style="color:var(--text-secondary); margin-bottom:3rem; font-size:1.2rem;">Have a question about a drop, order, or just want to vibe? Reach out.</p>
+                    
+                    <div class="info-block">
+                        <h4>Phone / WhatsApp</h4>
+                        <a href="https://wa.me/918310184715" target="_blank" class="hover-target">+91 8310184715</a>
+                    </div>
+                    <div class="info-block">
+                        <h4>Email</h4>
+                        <a href="mailto:thedesidrips@gmail.com" class="hover-target">thedesidrips@gmail.com</a>
+                    </div>
+                    <div class="info-block">
+                        <h4>Instagram</h4>
+                        <a href="https://instagram.com/thedesidrips" target="_blank" class="hover-target">@thedesidrips</a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" class="hover-target" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" class="hover-target" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject / Order ID" class="hover-target">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Message" class="hover-target" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary hover-target" style="padding: 1rem 3rem;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer section-padding" style="border-top: 1px solid var(--border-color);">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <h2>TheDesiDrips</h2>
+                        <p>Wear Your Roots. Drip Your Culture.</p>
+                        <div style="margin-top: 1rem; display: flex; gap: 1rem; font-family: var(--font-body); font-weight: 600;">
+                            <a href="https://instagram.com/thedesidrips" target="_blank" class="hover-target" style="text-decoration: underline;">Instagram</a>
+                            <a href="https://wa.me/918310184715" target="_blank" class="hover-target" style="text-decoration: underline;">WhatsApp</a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Shop</h4>
+                        <a href="collections.html" class="hover-target">All Products</a>
+                        <a href="collections.html" class="hover-target">New Arrivals</a>
+                        <a href="collections.html" class="hover-target">Oversized</a>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Support & Policies</h4>
+                        <a href="contact.html" class="hover-target">Contact Us</a>
+                        <a href="shipping-policy.html" class="hover-target">Shipping Policy</a>
+                        <a href="return-policy.html" class="hover-target">Return & Exchange</a>
+                        <a href="privacy-policy.html" class="hover-target">Privacy Policy</a>
+                    </div>
+                </div>
+                <div class="footer-bottom" style="border:none; padding-top:0;">
+                    <p>&copy; 2026 TheDesiDrips. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

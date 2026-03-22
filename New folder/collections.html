@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TheDesiDrips Shop - Browse our curated collection of premium streetwear, oversized tees, and graphic t-shirts blending global trends with Desi aesthetics.">
+    <meta name="keywords" content="streetwear, indian streetwear, desi clothing, oversized t-shirts India, graphic tees, TheDesiDrips, urban clothing India, ethnic streetwear, drip culture">
+    <meta name="author" content="TheDesiDrips">
+    <!-- Open Graph / WhatsApp / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Shop All | TheDesiDrips">
+    <meta property="og:description" content="Browse our curated collection of premium Indian streetwear blending global trends with Desi aesthetics.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=1200">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Shop All | TheDesiDrips">
+    <meta property="twitter:description" content="Browse our curated collection of premium Indian streetwear blending global trends with Desi aesthetics.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=1200">
+    <title>Shop All | TheDesiDrips</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        .collection-header { padding-top: calc(var(--header-height) + 4rem); padding-bottom: 2rem; border-bottom: 1px solid var(--border-color); margin-bottom: 3rem; }
+        .collection-layout { display: grid; grid-template-columns: 250px 1fr; gap: 3rem; }
+        .filter-sidebar { position: sticky; top: calc(var(--header-height) + 2rem); height: max-content; }
+        .filter-group { margin-bottom: 2rem; }
+        .filter-title { font-family: var(--font-heading); font-size: 1rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
+        .filter-options label { display: block; margin-bottom: 0.5rem; cursor: none; color: var(--text-secondary); transition: color 0.3s ease; }
+        .filter-options label:hover { color: var(--text-primary); }
+        .filter-options input { display: none; }
+        @media (max-width: 768px) { .collection-layout { grid-template-columns: 1fr; } .filter-sidebar { position: relative; top: 0; } }
+    </style>
+</head>
+<body class="loading">
+    <div class="cursor"></div><div class="cursor-follower"></div>
+    <div class="loader"><div class="loader-text"><span>Shop</span><span class="accent">All</span></div><div class="loader-progress"></div></div>
+
+    <!-- Header (Same as index) -->
+    <header class="header">
+        <div class="nav-wrapper">
+            <a href="index.html" class="logo"><img src="logo.png" alt="TheDesiDrips" class="logo-img"></a>
+            <nav class="nav-links">
+                <a href="collections.html" class="nav-link hover-target">Shop</a>
+                <a href="about.html" class="nav-link hover-target">About</a>
+                <a href="contact.html" class="nav-link hover-target">Contact</a>
+                <a href="checkout.html" class="nav-link hover-target">Checkout</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="cart-toggle hover-target">Cart ( <span class="cart-count">0</span> )</button>
+                <button class="menu-toggle hover-target"><span class="line"></span><span class="line"></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="menu-bg"></div>
+        <nav class="mobile-nav-links">
+            <div class="menu-item"><a href="index.html" class="hover-target">Home</a></div>
+            <div class="menu-item"><a href="collections.html" class="hover-target">Shop All</a></div>
+            <div class="menu-item"><a href="about.html" class="hover-target">Brand Story</a></div>
+            <div class="menu-item"><a href="contact.html" class="hover-target">Contact</a></div>
+            <div class="menu-item"><a href="checkout.html" class="hover-target">Checkout</a></div>
+        </nav>
+    </div>
+
+    <!-- Slide-in Cart -->
+    <div class="cart-panel"><div class="cart-header"><h3>Your Cart</h3><button class="cart-close hover-target">Close</button></div><div class="cart-items"><p class="empty-cart-msg">Your cart is empty.</p></div><div class="cart-footer"><div class="cart-total"><span>Total</span><span>₹0.00</span></div><a href="checkout.html" class="btn checkout-btn hover-target">Checkout</a></div></div><div class="cart-overlay"></div>
+
+    <main id="main">
+        <div class="container">
+            <div class="collection-header">
+                <h1 class="section-title">All Products</h1>
+                <p>Curated streetwear blending global trends with Desi aesthetics.</p>
+            </div>
+            
+            <div class="collection-layout">
+                <aside class="filter-sidebar">
+                    <div class="filter-group">
+                        <div class="filter-title">Category</div>
+                        <div class="filter-options">
+                            <label class="hover-target"><input type="checkbox"> Oversized Tees</label>
+                            <label class="hover-target"><input type="checkbox"> Graphic Tees</label>
+                            <label class="hover-target"><input type="checkbox"> Hoodies</label>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <div class="filter-title">Size</div>
+                        <div class="filter-options">
+                            <label class="hover-target"><input type="checkbox"> S</label>
+                            <label class="hover-target"><input type="checkbox"> M</label>
+                            <label class="hover-target"><input type="checkbox"> XL</label>
+                        </div>
+                    </div>
+                </aside>
+                
+                <div class="products-grid">
+                    <!-- Product Card 1 -->
+                    <div class="product-card hover-target">
+                        <a href="product.html">
+                            <div class="product-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=600&auto=format&fit=crop" loading="lazy" alt="T-Shirt 1" class="product-img main-img">
+                                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=600&auto=format&fit=crop" loading="lazy" alt="T-Shirt 1 Hover" class="product-img hover-img">
+                                <div class="quick-add">
+                                    <button class="btn btn-block quick-add-btn hover-target" onclick="event.preventDefault(); document.querySelector('.cart-toggle').click();">Quick Add</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Raja Graphic Tee</h3>
+                                <p class="product-price">₹1,499</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Product Card 2 -->
+                    <div class="product-card hover-target">
+                        <a href="product.html">
+                            <div class="product-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1568252542512-9fe8cf4c8cae?q=80&w=600&auto=format&fit=crop" loading="lazy" alt="T-Shirt 2" class="product-img main-img">
+                                <img src="https://images.unsplash.com/photo-1520975954732-57dd22299614?q=80&w=600&auto=format&fit=crop" loading="lazy" alt="T-Shirt 2 Hover" class="product-img hover-img">
+                                <div class="quick-add">
+                                    <button class="btn btn-block quick-add-btn hover-target" onclick="event.preventDefault(); document.querySelector('.cart-toggle').click();">Quick Add</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Mumbai Nights Oversized</h3>
+                                <p class="product-price">₹1,799</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Product Card 3 -->
+                    <div class="product-card hover-target">
+                        <a href="product.html">
+                            <div class="product-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1618517351616-389ab922c159?q=80&w=600&auto=format&fit=crop" loading="lazy" alt="T-Shirt 3" class="product-img main-img">
+                                <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?q=80&w=600&auto=format&fit=crop" loading="lazy" alt="T-Shirt 3 Hover" class="product-img hover-img">
+                                <div class="quick-add">
+                                    <button class="btn btn-block quick-add-btn hover-target" onclick="event.preventDefault(); document.querySelector('.cart-toggle').click();">Quick Add</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Essentials Blank</h3>
+                                <p class="product-price">₹999</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer section-padding" style="margin-top: 5rem;">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <h2>TheDesiDrips</h2>
+                        <p>Wear Your Roots. Drip Your Culture.</p>
+                        <div style="margin-top: 1rem; display: flex; gap: 1rem; font-family: var(--font-body); font-weight: 600;">
+                            <a href="https://instagram.com/thedesidrips" target="_blank" class="hover-target" style="text-decoration: underline;">Instagram</a>
+                            <a href="https://wa.me/918310184715" target="_blank" class="hover-target" style="text-decoration: underline;">WhatsApp</a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Shop</h4>
+                        <a href="collections.html" class="hover-target">All Products</a>
+                        <a href="collections.html" class="hover-target">New Arrivals</a>
+                        <a href="collections.html" class="hover-target">Oversized</a>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Support & Policies</h4>
+                        <a href="contact.html" class="hover-target">Contact Us</a>
+                        <a href="shipping-policy.html" class="hover-target">Shipping Policy</a>
+                        <a href="return-policy.html" class="hover-target">Return & Exchange</a>
+                        <a href="privacy-policy.html" class="hover-target">Privacy Policy</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 TheDesiDrips. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

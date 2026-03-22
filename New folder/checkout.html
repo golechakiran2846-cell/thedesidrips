@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Secure checkout for TheDesiDrips. Complete your order for premium Indian streetwear.">
+    <meta name="keywords" content="streetwear checkout, TheDesiDrips checkout, secure clothing checkout">
+    <meta name="author" content="TheDesiDrips">
+    <title>Checkout | TheDesiDrips</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <style>
+        .checkout-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; padding-top: calc(var(--header-height) + 2rem); margin-bottom: 5rem; }
+        .checkout-form { padding-right: 2rem; }
+        .form-section { margin-bottom: 3rem; }
+        .form-title { font-size: 1.5rem; margin-bottom: 1.5rem; text-transform: uppercase; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; }
+        .input-group { margin-bottom: 1rem; }
+        .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+        input[type="text"], input[type="email"], input[type="tel"] { width: 100%; padding: 1rem; background: transparent; border: 1px solid var(--border-color); color: var(--text-primary); font-family: var(--font-body); outline: none; transition: border-color 0.3s ease; }
+        input:focus { border-color: var(--accent-color); }
+        .payment-options { display: flex; flex-direction: column; gap: 1rem; }
+        .payment-card { border: 1px solid var(--border-color); padding: 1.5rem; display: flex; align-items: center; gap: 1rem; cursor: pointer; transition: border-color 0.3s ease; }
+        .payment-card:hover, .payment-card.active { border-color: var(--accent-color); }
+        .payment-card input { accent-color: var(--accent-color); transform: scale(1.2); }
+        .order-summary { background: var(--bg-secondary); padding: 2rem; border-radius: 4px; position: sticky; top: calc(var(--header-height) + 2rem); height: max-content; }
+        .summary-item { display: flex; justify-content: space-between; margin-bottom: 1rem; }
+        .summary-item img { width: 60px; height: 80px; object-fit: cover; }
+        .summary-item-details { display: flex; gap: 1rem; }
+        .summary-total { border-top: 1px solid var(--border-color); padding-top: 1.5rem; margin-top: 1.5rem; font-size: 1.2rem; font-weight: 700; display: flex; justify-content: space-between; }
+        
+        @media (max-width: 900px) { .checkout-layout { grid-template-columns: 1fr; } .checkout-form { padding-right: 0; } .order-summary { position: relative; top: 0; } }
+    </style>
+</head>
+<body class="loading">
+    <div class="cursor"></div><div class="cursor-follower"></div>
+    <div class="loader"><div class="loader-text"><span>Checkout</span></div><div class="loader-progress"></div></div>
+
+    <header class="header">
+        <div class="nav-wrapper">
+            <a href="index.html" class="logo"><img src="logo.png" alt="TheDesiDrips" class="logo-img"></a>
+            <nav class="nav-links">
+                <a href="collections.html" class="nav-link hover-target">Shop</a>
+                <a href="about.html" class="nav-link hover-target">About</a>
+                <a href="contact.html" class="nav-link hover-target">Contact</a>
+                <a href="checkout.html" class="nav-link hover-target">Checkout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="container">
+            <div class="checkout-layout">
+                <div class="checkout-form">
+                    <div class="form-section">
+                        <h2 class="form-title">Contact Information</h2>
+                        <div class="input-group">
+                            <input type="email" placeholder="Email Address" class="hover-target">
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h2 class="form-title">Shipping Address</h2>
+                        <div class="input-row">
+                            <input type="text" placeholder="First Name" class="hover-target">
+                            <input type="text" placeholder="Last Name" class="hover-target">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" placeholder="Address" class="hover-target">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" placeholder="Apartment, suite, etc. (optional)" class="hover-target">
+                        </div>
+                        <div class="input-row">
+                            <input type="text" placeholder="City" class="hover-target">
+                            <input type="text" placeholder="State" class="hover-target">
+                            <input type="text" placeholder="PIN Code" class="hover-target">
+                        </div>
+                        <div class="input-group">
+                            <input type="tel" placeholder="Phone" class="hover-target">
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h2 class="form-title">Payment</h2>
+                        <div class="payment-options">
+                            <label class="payment-card active hover-target">
+                                <input type="radio" name="payment" value="card" checked>
+                                <div>
+                                    <h4>Credit / Debit Card</h4>
+                                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Secure payment via Razorpay / Stripe</p>
+                                </div>
+                            </label>
+                            <label class="payment-card hover-target" style="border-color: #00BAF2;">
+                                <input type="radio" name="payment" value="paytm">
+                                <div>
+                                    <h4 style="color: #00BAF2;">Paytm</h4>
+                                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Pay via Paytm Wallet, UPI, or Saved Cards</p>
+                                </div>
+                            </label>
+                            <label class="payment-card hover-target">
+                                <input type="radio" name="payment" value="upi">
+                                <div>
+                                    <h4>Other UPI Apps</h4>
+                                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Google Pay, PhonePe, BHIM</p>
+                                </div>
+                            </label>
+                            <label class="payment-card hover-target">
+                                <input type="radio" name="payment" value="cod">
+                                <div>
+                                    <h4>Cash on Delivery (COD)</h4>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-block hover-target" style="padding: 1.5rem; font-size: 1.2rem;">Complete Order</button>
+                </div>
+                
+                <div class="order-summary">
+                    <h2 class="form-title" style="border:none;">Order Summary</h2>
+                    <div class="summary-items">
+                        <div class="summary-item">
+                            <div class="summary-item-details">
+                                <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=200" alt="Item">
+                                <div>
+                                    <h4>Raja Graphic Tee</h4>
+                                    <p style="color:var(--text-secondary);font-size:0.9rem;">Size: M</p>
+                                </div>
+                            </div>
+                            <div>₹1,499</div>
+                        </div>
+                    </div>
+                    
+                    <div style="border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: 1rem;">
+                        <div class="summary-item" style="margin-bottom: 0.5rem;"><span style="color:var(--text-secondary)">Subtotal</span><span>₹1,499</span></div>
+                        <div class="summary-item"><span style="color:var(--text-secondary)">Shipping</span><span>Free</span></div>
+                    </div>
+                    
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span class="accent-text">₹1,499</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        const checkoutBtn = document.querySelector('.checkout-form .btn-primary');
+        
+        // Redirect to success page on click
+        checkoutBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = 'success.html';
+        });
+
+        document.querySelectorAll('.payment-card').forEach(card => {
+            card.addEventListener('click', () => {
+                // Reset all cards
+                document.querySelectorAll('.payment-card').forEach(c => {
+                    c.classList.remove('active');
+                    if(c.querySelector('input').value !== 'paytm') {
+                        c.style.borderColor = 'var(--border-color)';
+                    } else {
+                        c.style.borderColor = '#00BAF2'; // keep paytm brand color visible
+                    }
+                });
+                
+                // Activate clicked card
+                card.classList.add('active');
+                const radio = card.querySelector('input');
+                radio.checked = true;
+                
+                // Apply active border
+                if(radio.value === 'paytm') {
+                    card.style.borderColor = '#00BAF2';
+                    checkoutBtn.textContent = 'Proceed to Paytm';
+                    checkoutBtn.style.background = '#00BAF2';
+                    checkoutBtn.style.color = '#fff';
+                    checkoutBtn.style.borderColor = '#00BAF2';
+                } else {
+                    card.style.borderColor = 'var(--accent-color)';
+                    checkoutBtn.textContent = 'Complete Order';
+                    checkoutBtn.style.background = 'var(--text-primary)';
+                    checkoutBtn.style.color = 'var(--bg-color)';
+                    checkoutBtn.style.borderColor = 'var(--text-primary)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
