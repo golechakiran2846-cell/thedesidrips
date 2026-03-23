@@ -29,8 +29,8 @@
         .story-grid:nth-child(even) { grid-template-columns: 1fr 1fr; direction: rtl; }
         .story-grid:nth-child(even) .story-text { direction: ltr; }
         .story-text h2 { font-size: 3rem; margin-bottom: 2rem; color: var(--accent-color); }
-        .story-text p { font-size: 1.2rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; }
-        .story-img-wrapper { overflow: hidden; aspect-ratio: 4/5; }
+        <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="components.css">
         .story-img { width: 100%; height: 100%; object-fit: cover; }
         @media (max-width: 768px) { .story-grid, .story-grid:nth-child(even) { grid-template-columns: 1fr; direction: ltr; } }
     </style>
@@ -144,7 +144,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
     <script src="js/app.js"></script>
-    <script>
+    <script src="app.js"></script>
         document.addEventListener("DOMContentLoaded", () => {
             gsap.registerPlugin(ScrollTrigger);
             
