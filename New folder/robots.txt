@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://thedesidrips.com/sitemap.xml
